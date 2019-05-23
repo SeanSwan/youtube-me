@@ -1,0 +1,87 @@
+@import "./variables";
+
+
+/* border-box */
+.search-container *,
+.search-container *:after,
+.search-container *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* search bar focus */
+.search-container *:focus {
+  background: #fbfbfb;
+  color: #333333;
+  outline: 0;
+}
+
+/* search bar container */
+.search-container {
+  display: table;
+  position: relative;
+  width: 51px;
+  height: 0px;
+}
+
+/* search icon button */
+.search-icon-btn {
+  background-color: $color-aqua-green-2;
+  border: 3px solid $color-aqua-green-2;
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  
+  display: table-cell;
+  height: 58px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 55px;
+  z-index: 2;
+  box-shadow: 0 1rem 2rem rgba($color-black, .4);
+}
+
+/* search bar input container */
+.search-input {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+/* search bar input */
+.search-input input.search-bar {
+  border: 3px solid #cccccc;
+  height: 58px;
+  padding: 0px;
+  width: 100px;
+  border-radius: 50px;
+  box-shadow: 0 1rem 2rem rgba($color-black, .4);
+}
+.search-input input.search-bar:focus {
+  padding-left: 60px;
+  padding-right: 10px;
+  width: 200px;
+  border-radius: 50px;
+  box-shadow: 0 1rem 2rem rgba($color-black, .4);
+
+}
+
+/* transition effect */
+.search-input input.search-bar,
+.search-icon-btn {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* hover on search bar container */
+.search-container:hover > .search-input input.search-bar {
+  padding-left: 60px;
+  padding-right: 10px;
+  width: 300px;
+  border-radius: 50px;
+}

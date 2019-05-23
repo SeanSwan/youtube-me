@@ -1,0 +1,125 @@
+/* border-box */
+.search-container *,
+.search-container *:after,
+.search-container *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* search bar focus */
+.search-container *:focus {
+  background: #fbfbfb;
+  color: #333333;
+  outline: 0; }
+
+/* search bar container */
+.search-container {
+  display: table;
+  position: relative;
+  width: 51px;
+  height: 0px; }
+
+/* search icon button */
+.search-icon-btn {
+  background-color: rgba(11, 189, 171, 0.925);
+  border: 3px solid rgba(11, 189, 171, 0.925);
+  color: white;
+  border-radius: 50px;
+  display: table-cell;
+  height: 58px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 55px;
+  z-index: 2;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+
+/* search bar input container */
+.search-input {
+  position: absolute;
+  left: 0;
+  z-index: 1; }
+
+/* search bar input */
+.search-input input.search-bar {
+  border: 3px solid #cccccc;
+  height: 58px;
+  padding: 0px;
+  width: 100px;
+  border-radius: 50px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+
+.search-input input.search-bar:focus {
+  padding-left: 60px;
+  padding-right: 10px;
+  width: 200px;
+  border-radius: 50px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+
+/* transition effect */
+.search-input input.search-bar,
+.search-icon-btn {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+
+/* hover on search bar container */
+.search-container:hover > .search-input input.search-bar {
+  padding-left: 60px;
+  padding-right: 10px;
+  width: 300px;
+  border-radius: 50px; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 8rem; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc( (100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-huge {
+  margin-bottom: 10rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-top-small {
+  margin-top: 1.5rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
