@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/style.css";
+import "../scss/_variables.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -8,14 +9,12 @@ class SearchBar extends React.Component {
 
   onInputChange = event => {
     this.setState({ term: event.target.value });
-    
   };
 
   onFormSubmit = event => {
     event.preventDefault();
-    
 
-    //this.props.onSubmit(this.state.term);
+    this.props.onFormSubmit(this.state.term);
   };
 
   render() {

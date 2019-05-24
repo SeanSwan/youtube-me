@@ -1,6 +1,5 @@
 @import "./variables";
 
-
 /* border-box */
 .search-container *,
 .search-container *:after,
@@ -32,7 +31,7 @@
   border: 3px solid $color-aqua-green-2;
   color: rgb(255, 255, 255);
   border-radius: 50px;
-  
+
   display: table-cell;
   height: 58px;
   position: relative;
@@ -40,7 +39,7 @@
   vertical-align: middle;
   width: 55px;
   z-index: 2;
-  box-shadow: 0 1rem 2rem rgba($color-black, .4);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
 }
 
 /* search bar input container */
@@ -57,15 +56,14 @@
   padding: 0px;
   width: 100px;
   border-radius: 50px;
-  box-shadow: 0 1rem 2rem rgba($color-black, .4);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
 }
 .search-input input.search-bar:focus {
   padding-left: 60px;
   padding-right: 10px;
   width: 200px;
   border-radius: 50px;
-  box-shadow: 0 1rem 2rem rgba($color-black, .4);
-
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
 }
 
 /* transition effect */

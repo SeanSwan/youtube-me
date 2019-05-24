@@ -1,136 +1,52 @@
 @import "./SearchBar";
 @import "./variables";
+@import "./VideoItem";
+@import "./mediaquery";
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+  font-family: sans-serif;
+}
 
+// ANIMATIONS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
 
-//FONT
-$default-font-size: 1.9rem;
+  60% {
+    transform: rotate(
+      180
+    ); //This is not doing anything just play with it or delete but were good otherwise
+  }
 
-//grid
-$grid-width: 114rem;
-$gutter-vertical: 8rem;
-$gutter-horizontal: 6rem;
+  80% {
+    transform: translateX(
+      1rem
+    ); // this moves the header back  <---- x  to give it the smooth  reverse look at the end 80% of the animation..
+  }
 
-//grid & row
-
-@mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
-.row {
-  max-width: $grid-width;
-  //background-color: rgb(17, 17, 114);
-  margin: 0 auto;
-  margin-bottom: $gutter-vertical;
-  &:not(:last-child) {
-    // placing margin on everything but the last child "&:not()
-    margin-bottom: $gutter-vertical;
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
   }
 
-  @include clearfix;
-
-  [class^="col-"] {
-    // the attribute selector [].   ^ start with col- $ ends with col- * all col- picking all elements that start with col-
-    //background-color: rgb(30, 37, 35);
-    float: left;
-    &:not(:last-child) {
-      // using the not psedo class to exclude the last child element from margin.
-      margin-right: $gutter-horizontal;
-    }
+  80% {
+    transform: translateX(-1rem);
   }
 
-  .col-1-of-2 {
-    width: calc((100% - #{$gutter-horizontal}) / 2);
-  }
-
-  .col-1-of-3 {
-    width: calc(
-      (100% - 2 * #{$gutter-horizontal}) / 3
-    ); // 100% minus 2x gutter-horizontal divided by 3.
-  }
-
-  .col-2-of-3 {
-    width: calc(
-      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
-    ); // 2 times the width of the single 1 of 3 column "1-of-3" we multiplyed by 2 and then add the gutter horizontal notice the extra () brackets nedded in order to wrap
-  }
-
-  .col-1-of-4 {
-    width: calc((100% - 3 * #{$gutter-horizontal}) / 4); // was -3  / 4
-  }
-
-  .col-2-of-4 {
-    width: calc(
-      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
-    );
-  }
-
-  .col-3-of-4 {
-    width: calc(
-      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
-    ); // we multipled by 3 now plus 2 times the gutter horizontal
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
-
-//Mixins
-
-// clearing both floats it gave me the space needed betweet the rows gives your row height section 5 lecture 34
-
-// MEDIA QUERY MANAGER
-
-// 1em = 16px
-
-@mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media (max-width: 600px) {
-      @content;
-    } //600px
-  }
-  @if $breakpoint == tab-port {
-    @media (max-width: 900px) {
-      @content;
-    } //900px
-  }
-  @if $breakpoint == tab-land {
-    @media (max-width: 1200px) {
-      @content;
-    } //1200px
-  }
-  @if $breakpoint == big-desktop {
-    @media (max-width: 1800px) {
-      @content;
-    } //1800px
-  }
-}
-
-//Utilities
-
-.u-center-text {
-  text-align: center;
-}
-.u-margin-bottom-huge {
-  margin-bottom: 10rem;
-}
-.u-margin-bottom-big {
-  margin-bottom: 8rem;
-}
-.u-margin-bottom-medium {
-  margin-bottom: 4rem;
-}
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem;
-}
-.u-margin-top-small {
-  margin-top: 1.5rem;
-}
-.u-margin-top-big {
-  margin-top: 8rem;
-}
-.u-margin-top-huge {
-  margin-top: 10rem;
-}
-
