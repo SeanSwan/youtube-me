@@ -30,8 +30,10 @@ class App extends React.Component {
   return (
       <div>
         <Searchbar onFormSubmit={this.onTermSubmit} />
-        <VideoDetail video={this.state.selectedVideo} />
         <VideoList onVideoSelect={this.onVideoSelect}videos={this.state.videos} />
+        <VideoDetail video={this.state.selectedVideo} />
+        
+        
         
       </div>
     );

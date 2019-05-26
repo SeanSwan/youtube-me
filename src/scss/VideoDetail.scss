@@ -1,0 +1,27 @@
+@import "./variables";
+
+
+.detailContainer {
+  display: inline-block;
+  max-width: 100rem;
+  min-width: 100rem;
+  max-height: 15rem;
+  min-height: 10rem;
+  border-style: solid;
+  background-color: #000000;
+  opacity: 0.9;
+  border-radius: 10px;
+  color: $color-aqua-green-2;
+  box-shadow: 3px 3px 3px;
+  font-size: 1.2rem;
+  margin: 20px 15px 15px 15px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.tv {
+  width: 800px;
+  height: 600px;
+
+}
