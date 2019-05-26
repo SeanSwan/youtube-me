@@ -7,9 +7,9 @@ const VideoDetail = ({ video }) => {
 
   return (
     <div>
-      <div className="video-item">
-        <h4 className="title">{video.snippet.title}</h4>
-        <p>video.snippet.description</p>
+      <div> 
+        <h4 >{video.snippet.title}</h4>
+        <p>{video.snippet.description}</p>
       </div>
     </div>
   );

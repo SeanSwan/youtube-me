@@ -1,10 +1,10 @@
 import React from "react";
-import Searchbar from "./SearchBar";
+import  Searchbar  from "./SearchBar";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import youtube from "../apis/youtube";
-import VideoList from "./VideoList";
-import VideoDetail from './VideoDetail';
+import  VideoList  from "./VideoList";
+import  VideoDetail  from "./VideoDetail";
 
 library.add(faSearch);
 
@@ -22,16 +22,17 @@ class App extends React.Component {
   };
 
   onVideoSelect = video => {
-    this.setState({ selectVideo: video });
+    this.setState({ selectedVideo: video });
+    console.log('this is videoselect', video);
   };
 
   render() {
-    return (
+  return (
       <div>
         <Searchbar onFormSubmit={this.onTermSubmit} />
         <VideoDetail video={this.state.selectedVideo} />
-        <VideoList onVideoSelect={this.onVideoSelect} 
-        videos={this.state.videos} />
+        <VideoList onVideoSelect={this.onVideoSelect}videos={this.state.videos} />
+        
       </div>
     );
   }

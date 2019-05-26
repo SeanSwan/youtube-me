@@ -50,3 +50,23 @@ body {
     transform: translate(0);
   }
 }
+
+
+.vidlist {
+  display: inline-block;
+  max-width: 30rem;
+  max-height: 30rem;
+  min-height: 25rem;
+  border-style: solid;
+  background-color: #0045f3;
+  opacity: 0.9;
+  border-radius: 30px;
+  color: rgb(198, 198, 198);
+  box-shadow: 3px 3px 3px;
+  font-size: 1.8rem;
+  margin: 15px 15px 15px 15px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+
+}

@@ -7,27 +7,23 @@
   margin-left: 77rem; 
   flex-direction: row;
   flex-wrap: wrap;
-  
   cursor: pointer;
 }
 
 .video-item .box {
   position: relative;
-  width: 180px;
+  width: 300px;
   height: 180px;
-  background: rgb(35, 2, 78);
+  background: rgb(125, 0, 197);
   margin: 30px 10px 10px 20px;
   box-sizing: border-box;
   display: inline-block;
+  border-radius: 5px;
   
   
 }
 
-.video-item .box .imgBox {
-  position: relative;
-  
-  
-}
+ 
 
 .video-item .box .imgBox .boxImage {
   max-width: 15rem;
@@ -64,16 +60,28 @@
   color: $color-aqua-green-2;
   box-shadow: 3px 3px 3px;
   font-size: 1.8rem;
-  margin: 10px;
+  margin: 0px;
   overflow: hidden;
 }
 
 .title {
-  margin: 20px 10px 10px 0px;
+  margin: 5px; 
   padding: 0;
   font-size: 20px;
+  color: $color-primary-light;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  max-height: 70px;
+}
+
+.description {
+  margin: 5px 5px 1px 5px;
+  padding: 0;
+  font-size: 15px;
   color: $color-aqua-green-2;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 150px;
+  max-height: 70px;
 }
